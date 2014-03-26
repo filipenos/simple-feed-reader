@@ -1,0 +1,26 @@
+<html>
+	<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
+		rel="stylesheet" type="text/css"></link>
+	<head></head>
+
+	<body>
+		<div class="container">
+		<h1>My Feed Items</h1>
+		{{/* Output Feed data from context */}}
+		<table class="table">
+			{{range .Items}}
+			<tr>
+				<td>{{.Title}}</td>
+				<td>{{.Description}}</td>
+				<td><a href="{{.Link}}" target="_blank">Veja Mais</a></td>
+		    </tr>
+			{{else}}
+			<tr>
+				<td colspan=”3”>No feeds to display</td>
+			</tr>
+			{{end}}
+		</table>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	</div>
+	</body>
+</html>
